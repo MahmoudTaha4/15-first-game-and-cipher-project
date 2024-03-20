@@ -14,6 +14,7 @@ void DeletOneNum(int array[], int& arraySize, int temp);
 void PrintArray(int array[], int arraySize);
 void initArray(int array[], int arraySize);
 
+
 int main(){
     int arraySize = 9;
     int array[arraySize];
