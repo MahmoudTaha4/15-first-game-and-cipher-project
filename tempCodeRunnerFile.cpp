@@ -16,8 +16,7 @@ int main(){
         cout << "Choose the type that you want to get :";
         cin >> Type;
         cout << "Please enter the text :";
-        cin.ignore(1, '\n');
-        getline(cin,Message);
+        cin >> Message;
         cout << "Please enter the keyword :";
         cin >> Keyword;
         if (Type == 1){
@@ -29,14 +28,6 @@ int main(){
 
 void Cipher(string Message,string Keyword,string& encryptedMessage){
     for (int i = 0,j = Keyword.size(); i < Message.size();i++,j++){
-        if (Message[i] == ' '){
-            encryptedMessage += ' ';
-            continue;
-        }
-        else if (Message[i] >= '0' && Message[i] <= '9'){
-            encryptedMessage += Message[i];
-            continue;
-        }
         j %= Keyword.size();
         ll alphapet = 0;
         alphapet += int(Message[i]) + int (Keyword[j]);
